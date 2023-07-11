@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -69,18 +71,19 @@ nav .menu {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-
+    color: #191919;
 }
 
 nav .menu a {
     text-decoration: none;
-    padding-left: 7px;
-    color: rgba(0, 0, 0, 0.9);
+    padding-left: 15px;
+    color: r;
     font-family: Poppins, sans-serif;
     font-style: normal;
     font-size: 12px;
     font-weight: 500;
     line-height: 21px;
+    
 }
 
 @media (min-width: 768px) {
@@ -172,6 +175,7 @@ h1, .ts-h1 {
     position: relative;
     display: flex;
     justify-content: center;
+    padding: 95px 0px 95px 0px;
 }
 .help{
     text-align: center!important;
@@ -416,6 +420,16 @@ h2 {
     font-size: 80%;
     font-weight: 400;
 }
+@media (min-width: 576px){
+.md{
+    text-align: left!important;
+}
+}
+.mr{
+    margin-right: 1rem!important;
+    margin-bottom: 0.5rem!important;
+    margin-top: 0.5rem!important;
+}
 
 /* numbers  */
 
@@ -502,6 +516,7 @@ section {
 }
 .o1 {
     opacity: .6;
+    font-size: 33px;
 }
 .ts-opacity__30 {
     opacity: .3;
