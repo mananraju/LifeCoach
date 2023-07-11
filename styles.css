@@ -8,18 +8,48 @@
 header {
     width: 100%;
     height: 100vh;
-    background-image: url(http://www.themestarz.net/html/lifecoach/assets/img/bg-shape-top-left.png),
-        url(http://www.themestarz.net/html/lifecoach/assets/img/bg-woman.png),
-        url(http://www.themestarz.net/html/lifecoach/assets/img/bg-shape-bottom-right.png);
-    background-position-y: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
 }
+.backgroundimg {
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+.ts-background-image {
+    background-position: top center;
+}
+.ts-background-image, .ts-img-into-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.position-absolute {
+    position: absolute!important;
+}
+.ts-z-index__0 {
+    z-index: 0 !important;
+}
+.ts-z-index__-1 {
+    z-index: -1 !important;
+}
+.ts-left__0 {
+    left: 0%;
+}
+.ts-top__0 {
+    top: 0%;
+}
+
 
 nav {
     width: 100%;
-    height: 15vh;
+    height: 12vh;
     /* background-color: whitesmoke; */
     display: flex;
     justify-content: space-between;
@@ -27,19 +57,14 @@ nav {
 }
 
 nav .logo {
-    width: 27%;
+    width: 25.8%;
     text-align: end;
     /* background-color: pink; */
     color: rgba(0, 0, 0, 0.9);
-    font-family: Poppins, sans-serif;
-    font-style: normal;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
 }
 
 nav .menu {
-    width: 55%;
+    width: 53%;
     /* background-color: pink; */
     display: flex;
     justify-content: flex-start;
@@ -49,11 +74,11 @@ nav .menu {
 
 nav .menu a {
     text-decoration: none;
-    padding-left: 17px;
+    padding-left: 7px;
     color: rgba(0, 0, 0, 0.9);
     font-family: Poppins, sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 21px;
 }
@@ -91,26 +116,49 @@ nav .menu a {
         max-width: 50%;
     }
 }
-
 h1 {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.2;
-    font-size: 30px;
+    line-height: 1.4;
+    font-size: 40px;
     color: #191919;
     display: block;
-    margin-block-start: 2.77em;
+    margin-block-start: 2.2em;
     margin-block-end: 0.77em;
+}
+@media (min-width: 62rem){
+h1{
+    margin-bottom: 2.5rem;
+}
+}
+@media (min-width: 62rem) and (max-width: 74.9375rem){
+h1, .ts-h1 {
+    font-size: 3.125rem;
+}
 }
 
 .a1 p {
     font-family: Poppins, sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: 15px;
     line-height: 27px;
     color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px){
+.a1{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+.a1{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 /* Help For You */
@@ -317,21 +365,10 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-/* about me para  */
-p {
-    line-height: 1.6875rem;
-    margin-bottom: 1.875rem;
-    color: rgba(0, 0, 0, .5);
-    margin-top: 0;
+
+.pl-0 {
+    text-decoration: none;
 }
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-/* our mission we love awards  */
 
 .mb-5, .my-5 {
     margin-bottom: 3rem!important;
@@ -372,15 +409,6 @@ p {
     color: #495057;
     text-align: inherit;
 }
-a {
-    transition: .3s ease;
-}
-a:-webkit-any-link {
-    cursor: pointer;
-}
-.collapse {
-    display: none;
-}
 .pt-3, .py-3 {
     padding-top: 1rem!important;
 }
@@ -388,24 +416,6 @@ a:-webkit-any-link {
     font-size: 80%;
     font-weight: 400;
 }
-p {
-    line-height: 1.6875rem;
-    margin-bottom: 1.875rem;
-    color: rgba(0, 0, 0, .5);
-}
-p {
-    margin-top: 0;
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-/* add two buttons css  */
 
 /* numbers  */
 
@@ -493,17 +503,6 @@ section {
 .o1 {
     opacity: .6;
 }
-h2{
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.2;
-    color: inherit;
-    box-sizing: border-box;
-    display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 .ts-opacity__30 {
     opacity: .3;
 }
@@ -568,6 +567,12 @@ h5 {
     box-shadow: 0.125rem 0.1875rem 0.9375rem rgba(0, 0, 0, .15);
     margin-bottom: 1.875rem;
     overflow: hidden;
+    word-wrap: break-word;
+}
+@media (min-width: 62rem) and (max-width: 74.9375rem){
+.ts-card__image {
+    height: 12.5rem;
+}
 }
 .ts-border-radius__lg {
     border-radius: 0.5rem;
@@ -610,13 +615,6 @@ b, strong {
 }
 .mt-3, .my-3 {
     margin-top: 1rem!important;
-}
-p {
-    line-height: 1.6875rem;
-    margin-bottom: 1.875rem;
-    color: rgba(0, 0, 0, .5);
-    margin-top: 0;
-
 }
 
 /* webinars  */
@@ -748,6 +746,12 @@ form {
     display: block;
     margin-top: 0em;
 }
+.ts-box {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    margin-bottom: 1.875rem;
+    box-shadow: 0.125rem 0.1875rem 0.9375rem rgba(0, 0, 0, .15);
+}
 @media (min-width: 768px){
 .f1 {
     -webkit-box-flex: 0;
@@ -852,6 +856,7 @@ button, input, optgroup, select, textarea {
     margin: 0.25rem!important;
     line-height: 1.5;
 }
+
 .btnwebi{
     color: #6c757d;
     background-color: transparent;
@@ -861,9 +866,17 @@ button, input, optgroup, select, textarea {
 .office{
     text-decoration: none;
     font-weight: bold;
+    color: #f4b200;
 }
 .text-white {
     color: #fff!important;
     padding-top: 1.5rem!important;
     padding-bottom: 1.5rem!important;
 }
+
+@media screen and (min-width:100px) and (max-width:1100px){
+    .menu{
+        visibility: hidden;
+    }
+} 
+    
